@@ -1,0 +1,1 @@
+from .modernSlider import ModernSlider
