@@ -11,8 +11,8 @@ class ModernSlider(QSlider):
         self.setOrientation(Qt.Horizontal)
         slider = '''
         QSlider {
-            margin-top: 3px;
-            margin-bottom: 3px;
+            margin-top: 9px;
+            margin-bottom: 9px;
         }
 
         QSlider::groove:horizontal {
