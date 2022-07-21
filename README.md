@@ -9,7 +9,7 @@ PyQt modern styled slider
 
 ## Example
 ```python
-from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QApplication, QVBoxLayout, QPushButton, QWidget
 from pyqt_modern_slider import ModernSlider
 
 if __name__ == "__main__":
@@ -17,13 +17,19 @@ if __name__ == "__main__":
 
     app = QApplication(sys.argv)
     example = ModernSlider()
-    example.show()
+    btn = QPushButton('Play')
+    lay = QVBoxLayout()
+    lay.addWidget(example)
+    lay.addWidget(btn)
+    mainWidget = QWidget()
+    mainWidget.setLayout(lay)
+    mainWidget.show()
     app.exec_()
 ```
 
 Preview
 
-![image](https://user-images.githubusercontent.com/55078043/174434080-46db6da2-0356-4a86-bc9c-38e0fac29ce9.png)
+![image](https://user-images.githubusercontent.com/55078043/180106917-8d1fc889-b748-4213-aa68-42f4af00cd72.png)
 
 ## See Also
 * <a href="https://github.com/yjg30737/pyqt-media-slider.git">pyqt-media-slider</a> - QSlider which is good to use in media player
