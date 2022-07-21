@@ -9,31 +9,32 @@ class ModernSlider(QSlider):
 
     def __initUi(self):
         self.setOrientation(Qt.Horizontal)
-        slider = '''
-        QSlider {
-            margin-top: 9px;
-            margin-bottom: 9px;
-        }
+        height = 8
+        slider = f'''
+        QSlider {{
+            margin-top: {height+1}px;
+            margin-bottom: {height+1}px;
+        }}
 
-        QSlider::groove:horizontal {
+        QSlider::groove:horizontal {{
             border: #000088;
-            height: 8px;
+            height: {height}px;
             background: #6aa6ed;
-            margin: 2px 0;
-        }
+            margin: {height // 4}px 0;
+        }}
 
-        QSlider::handle:horizontal {
+        QSlider::handle:horizontal {{
             background: white;
 
-            border: 8px solid #6aa6ed;
-            width: 24px;
-            margin: -16px 0;
-            border-radius: 20px;
-        }
-        QSlider::add-page:horizontal {
+            border: {height} solid #6aa6ed;
+            width: {height * 3};
+            margin: {height * 2 * -1} 0;
+            border-radius: {height * 2 + height // 2}px;
+        }}
+        QSlider::add-page:horizontal {{
             background: white;
-            height: 8px;
-            margin: 2px 0;
-        }
+            height: {height}px;
+            margin: {height // 4}px 0;
+        }}
         '''
         self.setStyleSheet(slider)
