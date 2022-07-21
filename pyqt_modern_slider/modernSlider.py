@@ -17,20 +17,22 @@ class ModernSlider(QSlider):
 
         QSlider::groove:horizontal {
             border: #000088;
-            height: 3px;
+            height: 8px;
             background: #6aa6ed;
             margin: 2px 0;
         }
 
         QSlider::handle:horizontal {
             background: white;
-            border: 4px solid #6aa6ed;
-            width: 9px;
-            margin: -7px 0;
-            border-radius: 8px;
+
+            border: 8px solid #6aa6ed;
+            width: 24px;
+            margin: -16px 0;
+            border-radius: 20px;
         }
         QSlider::add-page:horizontal {
             background: white;
+            height: 8px;
             margin: 2px 0;
         }
         '''
